@@ -164,14 +164,14 @@ class pm_yandexmoney extends PaymentRoot{
         $liveurlhost = $uri->toString(array("scheme",'host', 'port'));
         
 
-		$ym_params = unserialize($order->payment_params_data);
+	$ym_params = unserialize($order->payment_params_data);
         $jshopConfig = JSFactory::getConfig();	    
         $item_name = $liveurlhost." ".sprintf(_JSHOP_PAYMENT_NUMBER, $order->order_number);
         $this->loadLanguageFile();      
         
-		$notify_url = $liveurlhost.SEFLink("index.php?option=com_jshopping&controller=checkout&task=step7&act=notify&js_paymentclass=pm_paypal&no_lang=1");
-        $return = $liveurlhost.SEFLink("index.php?option=com_jshopping&controller=checkout&task=step7&act=return&js_paymentclass=pm_paypal");
-        $cancel_return = $liveurlhost.SEFLink("index.php?option=com_jshopping&controller=checkout&task=step7&act=cancel&js_paymentclass=pm_paypal");
+	$notify_url = $liveurlhost.SEFLink("index.php?option=com_jshopping&controller=checkout&task=step7&act=notify&js_paymentclass=pm_yandexmoney&no_lang=1");
+        $return = $liveurlhost.SEFLink("index.php?option=com_jshopping&controller=checkout&task=step7&act=return&js_paymentclass=pm_yandexmoney");
+        $cancel_return = $liveurlhost.SEFLink("index.php?option=com_jshopping&controller=checkout&task=step7&act=cancel&js_paymentclass=pm_yandexmoney");
 		
         $_country = JTable::getInstance('country', 'jshop');
         $_country->load($order->d_country);
@@ -192,6 +192,7 @@ class pm_yandexmoney extends PaymentRoot{
 		   <input type="hidden" name="orderNumber" value="<?php echo $order->order_number;?>">
 		   <input type="hidden" name="sum" value="<?php echo $order->order_total;?>" data-type="number" >
 		   <input type="hidden" name="customerNumber" value="<?php echo $order->user_id; ?>" >
+		   <input type="hidden" name="cms_name" value="joomla" >
 		   <input type="hidden" name="shopSuccessURL" value="<?php echo $return; ?>" >
 		   <input type="hidden" name="shopFailURL" value="<?php echo $cancel_return; ?>" >
 		  
