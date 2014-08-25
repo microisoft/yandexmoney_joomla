@@ -176,7 +176,7 @@ defined('_JEXEC') or die('Restricted access');
      <b><?php echo _JSHOP_YM_SCID;?></b>
    </td>
    <td>
-     <input type = "text" class = "inputbox" name = "pm_params[scid]" size="45" value = "<?php echo $params['scid]']?>" />
+     <input type = "text" class = "inputbox" name = "pm_params[scid]" size="45" value = "<?php echo $params['scid']?>" />
    </td>
 </tr>
 
@@ -200,80 +200,6 @@ defined('_JEXEC') or die('Restricted access');
    </td>
  </tr>
 
-<?/*
- <tr>
-   <td  class="key">
-     <?php echo _JSHOP_PAYPAL_EMAIL;?>
-   </td>
-   <td>
-     <input type = "text" class = "inputbox" name = "pm_params[email_received]" size="45" value = "<?php echo $params['email_received']?>" />
-     <?php echo JHTML::tooltip(_JSHOP_PAYPAL_EMAIL_DESCRIPTION);?>
-   </td>
- </tr>
- <tr>
-   <td class="key">
-     <?php echo _JSHOP_TRANSACTION_END;?>
-   </td>
-   <td>
-     <?php              
-     print JHTML::_('select.genericlist', $orders->getAllOrderStatus(), 'pm_params[transaction_end_status]', 'class = "inputbox" size = "1"', 'status_id', 'name', $params['transaction_end_status'] );
-     echo " ".JHTML::tooltip(_JSHOP_PAYPAL_TRANSACTION_END_DESCRIPTION);
-     ?>
-   </td>
- </tr>
- <tr>
-   <td class="key">
-     <?php echo _JSHOP_TRANSACTION_PENDING;?>
-   </td>
-   <td>
-     <?php 
-     echo JHTML::_('select.genericlist',$orders->getAllOrderStatus(), 'pm_params[transaction_pending_status]', 'class = "inputbox" size = "1"', 'status_id', 'name', $params['transaction_pending_status']);
-     echo " ".JHTML::tooltip(_JSHOP_PAYPAL_TRANSACTION_PENDING_DESCRIPTION);
-     ?>
-   </td>
- </tr>
- <tr>
-   <td class="key">
-     <?php echo _JSHOP_TRANSACTION_FAILED;?>
-   </td>
-   <td>
-     <?php 
-     echo JHTML::_('select.genericlist',$orders->getAllOrderStatus(), 'pm_params[transaction_failed_status]', 'class = "inputbox" size = "1"', 'status_id', 'name', $params['transaction_failed_status']);
-     echo " ".JHTML::tooltip(_JSHOP_PAYPAL_TRANSACTION_FAILED_DESCRIPTION);
-     ?>
-   </td>
- </tr>
- <tr>
-   <td class="key">
-     <?php echo _JSHOP_CHECK_DATA_RETURN;?>
-   </td>
-   <td>
-     <?php              
-     print JHTML::_('select.booleanlist', 'pm_params[checkdatareturn]', 'class = "inputbox"', $params['checkdatareturn']);     
-     ?>
-   </td>
- </tr>
- <tr>
-   <td class="key">
-     <?php echo _JSHOP_USE_SSL;?>
-   </td>
-   <td>
-     <?php              
-     print JHTML::_('select.booleanlist', 'pm_params[use_ssl]', 'class = "inputbox"', $params['use_ssl']);     
-     ?>
-   </td>
- </tr>
- <tr>
-   <td class="key">
-     <?php echo _JSHOP_OVERRIDING_ADDRESSES?>
-   </td>
-   <td>
-     <?php              
-     print JHTML::_('select.booleanlist', 'pm_params[address_override]', 'class = "inputbox"', $params['address_override']);
-     ?>
-   </td>
- </tr> 
- */?>
 </table>
 </fieldset>
 </div>
