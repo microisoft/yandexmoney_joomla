@@ -10,3 +10,5 @@ yandexmoney_joomla
 
 
 Полная работоспособность проверена на связках: Joomla 3.2.3 + JoomShopping 4.3.3, Joomla 3.3.0 + JoomShopping 4.3.3, Joomla 3.3.0 + JoomShopping 4.4.0
+
+wow
