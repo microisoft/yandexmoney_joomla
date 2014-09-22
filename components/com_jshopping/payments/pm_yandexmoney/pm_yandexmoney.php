@@ -33,10 +33,9 @@ class pm_yandexmoney extends PaymentRoot{
       include(dirname(__FILE__)."/adminparamsform.php");	  
 	}
 
-	//ôóíêöèÿ ïîäêëþ÷àåò ÿçûêîâûé ôàéë
 	function loadLanguageFile(){
 		$lang = JFactory::getLanguage();
-		$langtag = $lang->getTag(); //îïðåäåëÿåì òåêóùèé ÿçûê
+		$langtag = $lang->getTag();
 		if (file_exists(JPATH_ROOT.'/components/com_jshopping/payments/pm_yandexmoney/lang/'.$langtag.'.php')) {
 			require_once(JPATH_ROOT.'/components/com_jshopping/payments/pm_yandexmoney/lang/'.$langtag.'.php');
 		} else { 
@@ -101,7 +100,7 @@ class pm_yandexmoney extends PaymentRoot{
 		$this->ym_shopid = $pmconfigs['shopid'];
 		$this->ym_scid = $pmconfigs['scid'];
 
-		$order->order_total = floatval($order->order_total); //ïðèâîäèì ñóììó çàêàçà â íóæíûé ôîðìàò
+		$order->order_total = floatval($order->order_total);
 		
 		$rez = '';
 		$error = '';
