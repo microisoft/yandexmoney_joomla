@@ -33,10 +33,10 @@ class pm_yandexmoney extends PaymentRoot{
       include(dirname(__FILE__)."/adminparamsform.php");	  
 	}
 
-	//ôóíêöèÿ ïîäêëþ÷àåò ÿçûêîâûé ôàéë
+	//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã¯Ã®Ã¤ÃªÃ«Ã¾Ã·Ã Ã¥Ã² Ã¿Ã§Ã»ÃªÃ®Ã¢Ã»Ã© Ã´Ã Ã©Ã«
 	function loadLanguageFile(){
 		$lang = JFactory::getLanguage();
-		$langtag = $lang->getTag(); //îïðåäåëÿåì òåêóùèé ÿçûê
+		$langtag = $lang->getTag(); //Ã®Ã¯Ã°Ã¥Ã¤Ã¥Ã«Ã¿Ã¥Ã¬ Ã²Ã¥ÃªÃ³Ã¹Ã¨Ã© Ã¿Ã§Ã»Ãª
 		if (file_exists(JPATH_ROOT.'/components/com_jshopping/payments/pm_yandexmoney/lang/'.$langtag.'.php')) {
 			require_once(JPATH_ROOT.'/components/com_jshopping/payments/pm_yandexmoney/lang/'.$langtag.'.php');
 		} else { 
@@ -101,7 +101,7 @@ class pm_yandexmoney extends PaymentRoot{
 		$this->ym_shopid = $pmconfigs['shopid'];
 		$this->ym_scid = $pmconfigs['scid'];
 
-		$order->order_total = floatval($order->order_total); //ïðèâîäèì ñóììó çàêàçà â íóæíûé ôîðìàò
+		$order->order_total = floatval($order->order_total); //Ã¯Ã°Ã¨Ã¢Ã®Ã¤Ã¨Ã¬ Ã±Ã³Ã¬Ã¬Ã³ Ã§Ã ÃªÃ Ã§Ã  Ã¢ Ã­Ã³Ã¦Ã­Ã»Ã© Ã´Ã®Ã°Ã¬Ã Ã²
 		
 		$rez = '';
 		$error = '';
@@ -235,7 +235,7 @@ class pm_yandexmoney extends PaymentRoot{
     function getUrlParams($pmconfigs){
         $params = array(); 
 		if ($_POST['orderNumber']){
-			$params['order_id'] = (int)$_POST['orderNumber'];
+			$params['order_id'] = (int)$_POST['orderID'];
 		}else{
 			$params['order_id'] = (int)$_POST['label'];
 		}
