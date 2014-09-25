@@ -152,6 +152,14 @@ defined('_JEXEC') or die('Restricted access');
 		 ?>
 	</td>
 </tr>
+<tr class="org">
+	<td><?php echo _JSHOP_YM_METHOD_AB_DESCRIPTION;?></td>
+	<td>
+		 <?php              
+		 print JHTML::_('select.booleanlist', 'pm_params[method_ab]', 'class = "inputbox"', $params['method_ab']);
+		 ?>
+	</td>
+</tr>
 
 <tr>
    <td  class="key">

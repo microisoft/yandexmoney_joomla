@@ -38,7 +38,11 @@ defined('_JEXEC') or die('Restricted access');
 				<td><input type="radio" name="params[pm_yandexmoney][ym-payment-type]" value="WM" id="ym5"></td><td><label for="ym5"><?php echo _JSHOP_YM_METHOD_WM_DESCRIPTION;?></label></td>
 			</tr>
 		 <?php } ?>
-	 </tbody>
+		<? if ($pmconfigs['method_ab']  && $pmconfigs['mode'] == 2){?>
+		   <tr class="highlight">
+				<td><input type="radio" name="params[pm_yandexmoney][ym-payment-type]" value="AB" id="ym6"></td><td><label for="ym6"><?php echo _JSHOP_YM_METHOD_AB_DESCRIPTION;?></label></td>
+			</tr>
+		 <?php } ?>	 </tbody>
  </table>
 
 <script type="text/javascript">
