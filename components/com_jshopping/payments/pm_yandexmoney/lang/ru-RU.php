@@ -22,6 +22,7 @@ define('_JSHOP_YM_METHOD_CASH_DESCRIPTION', 'наличными в кассах 
 define('_JSHOP_YM_METHOD_PHONE_DESCRIPTION', 'оплата со счета мобильного телефона');
 define('_JSHOP_YM_METHOD_WM_DESCRIPTION', 'электронная валюта WebMoney');
 define('_JSHOP_YM_METHOD_AB_DESCRIPTION', 'АльфаКлиk');
+define('_JSHOP_YM_METHOD_SB_DESCRIPTION', 'Сбербанк Онлайн');
 define('_JSHOP_YM_ACCOUNT_DESCRIPTION', 'Номер кошелька Яндекс:');
 
 define('_JSHOP_YM_REG_IND', 'Если у вас нет аккаунта в Яндекс-Деньги, то следует зарегистрироваться тут - <a href="https://money.yandex.ru/" target="_blank">https://money.yandex.ru/</a><br/><b>ВАЖНО!</b> Вам нужно будет указать ссылку для приема HTTP уведомлений здесь - <a href="https://sp-money.yandex.ru/myservices/online.xml">https://sp-money.yandex.ru/myservices/online.xml</a>');
